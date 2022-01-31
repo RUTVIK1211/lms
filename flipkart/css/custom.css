@@ -1,0 +1,163 @@
+div.main_container{
+    height: 11406px;
+    width: 99%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+header{
+    height: 96px ;
+}
+body{
+       background-color: #f1f3f6;
+       font-family: Roboto,Arial,sans-serif;
+      /* font-weight: bolder; */
+      width: 99%;
+
+}
+
+a{
+    font-weight: bold;
+    font-style: normal;
+}
+
+.header_top{
+    height: 56px;
+    background-color:#2874f0 ;
+    padding-top: 10px;
+    padding-left: 185px;
+    text-align: center;
+}
+
+.header_botton{
+ height: 800px;
+ width: 100%;
+
+}
+.main{
+    margin-top: 80px;
+    margin-left: 40px;
+    height: 280px;
+    
+    /* border: 1px solid red; */
+}
+.main2{
+    margin-top: 110px;
+     margin-left: 40px;
+    height:362px;
+    
+    box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.2);
+}
+.search{
+    width: 564px;
+    height: 37px;
+    background-color: #fff;
+    margin-left: 12px;
+    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.2) ;
+}
+.ep{
+    font-style: italic;
+    font-size: 0.7em;
+}
+.e{
+    color: white;
+}
+.p{
+    color: #ffe500;
+}
+.epp{
+    position: relative;
+    top: -10px;
+}
+.test{
+    background-color: white;
+    color: rgb(16, 63, 138);
+    padding: 5px 30px;
+    height: 35px;
+    width: 130px;
+    line-height: 23px;
+    border-radius: 0px;
+    text-align: center;
+    margin-left: 50px !important;
+    margin-top: 2px;
+    
+}
+
+.test1{
+    color: white;
+    margin-left: 15 px;
+}
+.test1:hover{
+    color: white;
+}
+#txt_search{
+    width: 500px;
+    margin-top: 8px;
+    margin-left: 12px;
+    border: none;
+    font-size: 0.9em;
+    font-weight: bolder;
+}
+ input:focus{outline: none;}
+ .img_nav{
+     height: 50%;
+ }
+
+.nav_ul{
+    display: inline-block;
+}
+.title{
+    font-size: 20px;
+}
+.timer{
+    margin-left: 10px;
+}
+
+.deals-row{
+    display: flex;
+    width: 100%;
+    max-height: 366px;
+    margin: 10px 0px;
+    /* padding-top: 20px; */
+}
+
+.deals-col{
+    text-align: center;
+    line-height: 22px;
+}
+
+.delas-col img{
+    width: 69px;
+    height: 150px;
+    transition: 300ms;
+}
+
+.deals-col img:hover{
+    transform: scale(0.9);
+}
+
+.deals-col h3,h4,h6{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.deals-col h3{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.deals-col h4{
+    color: green;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.deals-col h6{
+    color:rgb(161,161,161);
+    font-size: 12px;
+    font-weight: 100;
+}
+.card{
+    box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.2) ;
+}

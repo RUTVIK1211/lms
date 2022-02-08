@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific calculator</title>
+    <!-- custom css start -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- custom css end -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/fontawesome.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container1">
+        <center>
+            <!-- Main Display -->
+            <div class="display">
+                <input type="text" id="screen" placeholder="0">
+                <input type="hidden" name="memory" value="0" id="memory">
+                <input type="hidden" name="snd" id="snd" value="0">
+                <!-- 0-means not pressed -->
+            </div>
+
+            <!-- button area -->
+            <div class="btns">
+                <!-- row 0  -->
+                <div class="row1" id="lbut">
+                    <button onclick="deg()">DEG</button>
+                    <button onclick="fe()">F-E</button>
+                </div>
+
+                <!-- row 1 -->
+                <div class="row1">
+                    <button id="mc" onclick="memory('c')">Mc</button>
+                    <button id="mr" onclick="memory('r')">Mr</button>
+                    <button class="bold " onclick="memory('+')" id="m+">M+</button>
+                    <button class="bold" onclick="memory('-')" id="m-">M-</button>
+                    <button class="bold" onclick="memory('s')" id="mS">MS</button>
+                </div>
+
+                <!-- row 2 -->
+                <div class="row2">
+                    <ul style="list-style-type: none;">
+                        <li class="dropdown" id="list">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="./img/t.png" id="tri">
+                                Trigonometry <b class="caret"></b></a>
+                            <ul class="dropdown-menu" id="dd1">
+                                <li> <button onclick="trigosin()">sin</button></li>
+                                <li> <button onclick="trigocos()">cos</button> </li>
+                                <li><button onclick="trigotan()">tan</button> </li>
+                                <li><button onclick="trigocot()">cot</button> </li>
+                            </ul>
+                            <ul class="dropdown-menu" id="dd2" style="display: none;">
+                                <li> <button onclick=" trigoasinI()">sin<sup>-1</sup></button>
+                                </li>
+                                <li> <button onclick=" trigoacosI()">cos<sup>-1</sup></button>
+                                </li>
+                                <li> <button onclick=" trigoatanI()">tan<sup>-1</sup></button>
+                                </li>
+                                <li> <button onclick=" trigoacotI()">cot<sup>-1</sup></button>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul style="list-style-type: none;">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="./img/f.png" id="fun">
+                                Function <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>Comming Soon...</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- row 3 -->
+                <div class="row1">
+                    <button id="ndd" class="" onclick="change()">2<sup>nd</sup></button>
+                    <button onclick="pi()">&#960;</button>
+                    <button onclick="e()">e</button>
+                    <button onclick="screen.value=0">C</button>
+                    <button onclick="backspc()"><i class="fas fa-backspace"></i></button>
+                </div>
+
+                <!-- row 4 -->
+                <div class="row1">
+                    <button onclick="pow()">x<sup>2</sup></button>
+                    <button onclick="divide()">1/x</button>
+                    <button onclick="screen.value=Math.abs(screen.value)">|x|</button>
+                    <button onclick=" exp()">exp</button>
+                    <button class="btn">mod</button>
+
+                </div>
+
+                <!-- row 5 -->
+                <div class="row1">
+                    <button onclick="sqrt()"><sup>2</sup>&#8730;x</button>
+                    <button class="btn">(</button>
+                    <button class="btn">)</button>
+                    <button onclick="fact()">n!</button>
+                    <button class="btn">÷</button>
+                </div>
+
+                <!-- row 6 -->
+                <div class="row1">
+                    <button onclick="screen.value+='**'">x<sup>y</sup></button>
+                    <button class="btn bold">7</button>
+                    <button class="btn bold">8</button>
+                    <button class="btn bold">9</button>
+                    <button class="btn">×</button>
+                </div>
+
+                <!-- row 7 -->
+                <div class="row1">
+                    <button onclick="powx()">10<sup>x</sup></button>
+                    <button class="btn bold">4</button>
+                    <button class="btn bold">5</button>
+                    <button class="btn bold">6</button>
+                    <button class="btn">-</button>
+                </div>
+
+                <!-- row 8 -->
+                <div class="row1">
+                    <button onclick="log()">log</button>
+                    <button class="btn bold">1</button>
+                    <button class="btn bold">2</button>
+                    <button class="btn bold">3</button>
+                    <button class="btn">+</button>
+                </div>
+
+                <!-- row 9 -->
+                <div class="row1">
+                    <button onclick="ln()">ln</button>
+                    <button onclick="negpos()">-/+</button>
+                    <button class="btn bold">0</button>
+                    <button class="btn">.</button>
+                    <button class="back" onclick="Eval()">=</button>
+                </div>
+            </div>
+            <!-- button area end -->
+        </center>
+    </div>
+
+    <!-- custom js start -->
+    <script src="js/app.js">
+    </script>
+    <!-- custom js end -->
+    </body>
+
+</html>

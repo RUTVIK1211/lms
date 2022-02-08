@@ -1,3 +1,11 @@
+/**
+ * Developed by : Bhimani Rutvik
+ * Date         : 01/02/2022
+ * 
+ * tried to use ES6 concept like const and arrow function
+ */
+
+
 var screen = document.querySelector('#screen');
 var btn = document.querySelectorAll('.btn');
 
@@ -21,7 +29,7 @@ for (item of btn) {
                 btntext = '%';
                 break;
         }
-        screen.value += btntext;
+         screen.value += btntext;
     });
 }
 
@@ -31,7 +39,7 @@ for (item of btn) {
  *
  * @return  {int}  return the factorial
  */
-function fact() {
+const fact = () => {
     var i, num, f;
     if (screen.value == 0) {
         f = 0;
@@ -49,7 +57,7 @@ function fact() {
 
 
 // e value
-function e() {
+const e = () => {
     if (screen.value == 0) {
         screen.value = Math.E;
     } else {
@@ -57,22 +65,43 @@ function e() {
     }
 }
 
+const Eval = () => {
+    screen.value == '' ? '' : (screen.value = eval(screen.value));
+}
 
 /** Trigno Functions */
-function sin() {
+const trigosin = () => {
     screen.value = Math.sin(screen.value);
 }
 
-function cos() {
+
+const trigocos = () => {
     screen.value = Math.cos(screen.value);
 }
 
-function tan() {
+const trigotan =()=> {
     screen.value = Math.tan(screen.value);
 }
 
-function cot() {
+const trigocot =()=> {
     screen.value = Math.cot(screen.value);
+}
+
+const trigoasinI = () => {
+    screen.value = Math.asin(screen.value);
+}
+
+
+const trigoacosI = () => {
+    screen.value = Math.acos(screen.value);
+}
+
+const trigoatanI = () => {
+    screen.value = Math.atan(screen.value);
+}
+
+const trigoacotI = () => {
+    screen.value = Math.acot(screen.value);
 }
 
 
@@ -83,7 +112,7 @@ function cot() {
  *
  * @return  {int}            return result of an expersion
  */
-function memory(opration) {
+const memory = (opration ) => {
     var memory = document.getElementById("memory");
     screen.value = eval(screen.value);
 
@@ -115,16 +144,16 @@ function memory(opration) {
  *
  * @return  {exponation}  returned exponation number
  */
-function fe() {
+const fe = () => {
     var num = parseInt(screen.value);
     screen.value = num.toExponential();
 
 }
 
 /**
- * change trignometry function to inverse trigno function
- */
-function change() {
+ * change trignometry const to =  inverse => trigno const
+ */ 
+const change = () => {
 
     var state = document.getElementById('snd');
     var btn_2nd = document.getElementById("ndd");
@@ -149,29 +178,28 @@ function change() {
 }
 
 
-function backspc()
+const backspc = () =>
 {
     screen.value=screen.value.substr(0,screen.value.length-1);
 }
 
 
-function pow() {
+const pow = () => {
     screen.value = Math.pow(screen.value, 2);
 }
 
 
-
-function sqrt() {
+const sqrt = () => {
     screen.value = Math.sqrt(screen.value, 1 / 2);
 }
 
-function exp() {
+const exp = () => {
 
     screen.value = Math.exp(screen.value);
 
 }
 
-function pi() {
+const pi = () => {
     if (screen.value == 0) {
         screen.value = 3.14;
     } else {
@@ -179,19 +207,23 @@ function pi() {
     }
 }
 
-function log() {
+const log = () => {
     screen.value = Math.log10(screen.value);
 }
 
-function ln() {
+const ln = () => {
     screen.value = Math.log(screen.value);
 }
 
 
-function divide() {
+const divide = () => {
     screen.value = 1 / screen.value;
 }
 
-function powx() {
+const powx = () => {
     screen.value = 10 ** screen.value;
+}
+
+const deg = () => {
+    screen.value = screen.value * (180 / Math.PI);
 }

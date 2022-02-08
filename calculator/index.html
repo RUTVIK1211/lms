@@ -11,17 +11,12 @@
     <!-- custom css end -->
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/fontawesome.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css"
-        rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
-
-
-
-
     <div class="container1">
         <center>
             <!-- Main Display -->
@@ -33,18 +28,18 @@
             </div>
 
             <!-- button area -->
-            <dic class="btns">
+            <div class="btns">
                 <!-- row 0  -->
                 <div class="row1" id="lbut">
-                    <button onclick="screen.value=screen.value * (180/Math.PI)">DEG</button>
+                    <button onclick="deg()">DEG</button>
                     <button onclick="fe()">F-E</button>
                 </div>
 
                 <!-- row 1 -->
                 <div class="row1">
-                    <button class="" id="mc" onclick="memory('c')">Mc</button>
-                    <button class="" id="mr" onclick="memory('r')">Mr</button>
-                    <button class="bold" onclick="memory('+')" id="m+">M+</button>
+                    <button id="mc" onclick="memory('c')">Mc</button>
+                    <button id="mr" onclick="memory('r')">Mr</button>
+                    <button class="bold " onclick="memory('+')" id="m+">M+</button>
                     <button class="bold" onclick="memory('-')" id="m-">M-</button>
                     <button class="bold" onclick="memory('s')" id="mS">MS</button>
                 </div>
@@ -56,19 +51,19 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="./img/t.png" id="tri">
                                 Trigonometry <b class="caret"></b></a>
                             <ul class="dropdown-menu" id="dd1">
-                                <li> <button onclick="sin()">sin</button></li>
-                                <li> <button onclick="cos()">cos</button> </li>
-                                <li><button onclick="tan()">tan</button> </li>
-                                <li><button onclick="cot()">cot</button> </li>
+                                <li> <button onclick="trigosin()">sin</button></li>
+                                <li> <button onclick="trigocos()">cos</button> </li>
+                                <li><button onclick="trigotan()">tan</button> </li>
+                                <li><button onclick="trigocot()">cot</button> </li>
                             </ul>
                             <ul class="dropdown-menu" id="dd2" style="display: none;">
-                                <li> <button onclick="screen.value= Math.asin(screen.value)">sin<sup>-1</sup></button>
+                                <li> <button onclick=" trigoasinI()">sin<sup>-1</sup></button>
                                 </li>
-                                <li> <button onclick="screen.value= Math.acos(screen.value)">cos<sup>-1</sup></button>
+                                <li> <button onclick=" trigoacosI()">cos<sup>-1</sup></button>
                                 </li>
-                                <li> <button onclick="screen.value= Math.atan(screen.value)">tan<sup>-1</sup></button>
+                                <li> <button onclick=" trigoatanI()">tan<sup>-1</sup></button>
                                 </li>
-                                <li> <button onclick="screen.value= Math.acot(screen.value)">cot<sup>-1</sup></button>
+                                <li> <button onclick=" trigoacotI()">cot<sup>-1</sup></button>
                                 </li>
                             </ul>
                         </li>
@@ -78,7 +73,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="./img/f.png" id="fun">
                                 Function <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li>Up</li>
+                                <li>Comming Soon...</li>
                             </ul>
                         </li>
                     </ul>
@@ -87,72 +82,75 @@
                 <!-- row 3 -->
                 <div class="row1">
                     <button id="ndd" class="" onclick="change()">2<sup>nd</sup></button>
-                    <button id="" onclick="pi()">&#960;</button>
-                    <button id="" onclick="e()">e</button>
-                    <button id="" onclick="screen.value=''">C</button>
-                    <button id="" onclick="backspc()"><i class="fas fa-backspace"></i></button>
+                    <button onclick="pi()">&#960;</button>
+                    <button onclick="e()">e</button>
+                    <button onclick="screen.value=0">C</button>
+                    <button onclick="backspc()"><i class="fas fa-backspace"></i></button>
                 </div>
 
                 <!-- row 4 -->
                 <div class="row1">
-                    <button id="" onclick="pow()">x<sup>2</sup></button>
-                    <button id="" onclick="divide()">1/x</button>
-                    <button id="" onclick="screen.value=Math.abs(screen.value)">|x|</button>
-                    <button id="" onclick=" exp()">exp</button>
-                    <button id="" class="btn">mod</button>
+                    <button onclick="pow()">x<sup>2</sup></button>
+                    <button onclick="divide()">1/x</button>
+                    <button onclick="screen.value=Math.abs(screen.value)">|x|</button>
+                    <button onclick=" exp()">exp</button>
+                    <button class="btn">mod</button>
 
                 </div>
 
                 <!-- row 5 -->
                 <div class="row1">
-                    <button id="" onclick="sqrt()"><sup>2</sup>&#8730;x</button>
-                    <button id="" class="btn">(</button>
-                    <button id="" class="btn">)</button>
-                    <button id="" onclick="fact()">n!</button>
-                    <button id="" class="btn">÷</button>
+                    <button onclick="sqrt()"><sup>2</sup>&#8730;x</button>
+                    <button class="btn">(</button>
+                    <button class="btn">)</button>
+                    <button onclick="fact()">n!</button>
+                    <button class="btn">÷</button>
                 </div>
 
                 <!-- row 6 -->
                 <div class="row1">
-                    <button id="" onclick="screen.value+='**'">x<sup>y</sup></button>
-                    <button id="" class="btn bold" id="mr">7</button>
-                    <button id="" class="btn bold" id="m+">8</button>
-                    <button id="" class="btn bold" id="m-">9</button>
-                    <button id="" class="btn">×</button>
+                    <button onclick="screen.value+='**'">x<sup>y</sup></button>
+                    <button class="btn bold">7</button>
+                    <button class="btn bold">8</button>
+                    <button class="btn bold">9</button>
+                    <button class="btn">×</button>
                 </div>
 
                 <!-- row 7 -->
                 <div class="row1">
-                    <button id="" onclick="powx()">10<sup>x</sup></button>
-                    <button id="" class="btn bold" id="mr">4</button>
-                    <button id="" class="btn bold" id="m+">5</button>
-                    <button id="" class="btn bold" id="m-">6</button>
-                    <button id="" class="btn">-</button>
+                    <button onclick="powx()">10<sup>x</sup></button>
+                    <button class="btn bold">4</button>
+                    <button class="btn bold">5</button>
+                    <button class="btn bold">6</button>
+                    <button class="btn">-</button>
                 </div>
 
                 <!-- row 8 -->
                 <div class="row1">
-                    <button id="" onclick="log()">log</button>
-                    <button id="" class="btn bold">1</button>
-                    <button id="" class="btn bold">2</button>
-                    <button id="" class="btn bold">3</button>
-                    <button id="" class="btn">+</button>
+                    <button onclick="log()">log</button>
+                    <button class="btn bold">1</button>
+                    <button class="btn bold">2</button>
+                    <button class="btn bold">3</button>
+                    <button class="btn">+</button>
                 </div>
 
                 <!-- row 9 -->
                 <div class="row1">
-                    <button id="" onclick="ln()">ln</button>
-                    <button id="" onclick="negpos()">-/+</button>
-                    <button id="" class="btn bold" id="m+">0</button>
-                    <button id="" class="btn">.</button>
-                    <button class="back" onclick="screen.value=eval(screen.value)">=</button>
+                    <button onclick="ln()">ln</button>
+                    <button onclick="negpos()">-/+</button>
+                    <button class="btn bold">0</button>
+                    <button class="btn">.</button>
+                    <button class="back" onclick="Eval()">=</button>
                 </div>
-    </div>
-    </center>
+            </div>
+            <!-- button area end -->
+        </center>
     </div>
 
-</body>
-<script src="./js/app.js">
-</script>
+    <!-- custom js start -->
+    <script src="js/app.js">
+    </script>
+    <!-- custom js end -->
+    </body>
 
 </html>

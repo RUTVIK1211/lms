@@ -1,3 +1,12 @@
+
+/**  
+ * @Author: Bhimani Rutvik 
+ * @Date: 2022-01-31 11:46:27 
+ * @Desc:  Main css for flipkart clone 
+ */
+
+ 
+/* main body area container */
 div.main_container{
     height: 11406px;
     width: 99%;
@@ -21,6 +30,8 @@ a{
     font-style: normal;
 }
 
+
+/* top header and navigation */
 .header_top{
     height: 56px;
     background-color:#2874f0 ;
@@ -29,11 +40,14 @@ a{
     text-align: center;
 }
 
+/* secondary navigation */ 
 .header_botton{
  height: 800px;
  width: 100%;
 
 }
+
+/* section 1 parent containter */
 .main{
     margin-top: 80px;
     margin-left: 40px;
@@ -41,6 +55,8 @@ a{
     
     /* border: 1px solid red; */
 }
+
+/* section 2 parent container */ 
 .main2{
     margin-top: 110px;
      margin-left: 40px;
@@ -48,6 +64,8 @@ a{
     
     box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.2);
 }
+
+/* Search bar container */
 .search{
     width: 564px;
     height: 37px;
@@ -55,20 +73,31 @@ a{
     margin-left: 12px;
     box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.2) ;
 }
+
+/* expolore pluse in icon */
 .ep{
     font-style: italic;
     font-size: 0.7em;
 }
+
+/* explore in icon */
 .e{
     color: white;
 }
+
+/* pluse in icon */
 .p{
     color: #ffe500;
 }
+
+/* parent of explore pluse in icon */
 .epp{
     position: relative;
     top: -10px;
 }
+
+
+/* login button test */
 .test{
     background-color: white;
     color: rgb(16, 63, 138);
@@ -83,6 +112,7 @@ a{
     
 }
 
+/* more button  */
 .test1{
     color: white;
     margin-left: 15 px;
@@ -90,6 +120,8 @@ a{
 .test1:hover{
     color: white;
 }
+
+/* search bar */
 #txt_search{
     width: 500px;
     margin-top: 8px;
@@ -113,6 +145,7 @@ a{
     margin-left: 10px;
 }
 
+/* section 1 deals  */
 .deals-row{
     display: flex;
     width: 100%;
